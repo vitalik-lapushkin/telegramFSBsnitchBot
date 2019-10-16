@@ -1,0 +1,23 @@
+{
+  "name": "telegramFSBsnitchBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitalik-lapushkin/telegramFSBsnitchBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitalik-lapushkin/telegramFSBsnitchBot/issues"
+  },
+  "homepage": "https://github.com/vitalik-lapushkin/telegramFSBsnitchBot#readme",
+  "dependencies": {
+    "pg": "^7.12.1"
+  }
+}
