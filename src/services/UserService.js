@@ -1,21 +1,17 @@
 const userRepository = require('../repositories/UserRepository');
 
-const filterUnregistredUsers = (users) => {
-    const registeredUserIds = userRepository.getRegistredUsersFrom(users).map(user => user.id);
-    return users.filter(user => !registeredUserIds.includes(user.id));
-}
-
 class UserService {
     createUnregistredUsers(users) {
-        const unregistredUsers = filterUnregistredUsers(users);
-        userRepository.insertUsers(unregistredUsers);
+        const userIds = users.map(user => user.id);
+        const unregistredUserIds = userRepository.filterUnregistredUsers(userIds);
+        userRepository.insertUsers(unregistredUserIds);
     }
 
-    increaseRating() {
-
+    increaseRating(user) {
+        userRepository.increaseRating(user.id)
     }
 
-    decreaseRating() {
-        
+    decreaseRating(user) {
+        userRepository.decreaseRating(user.id)
     }
 }

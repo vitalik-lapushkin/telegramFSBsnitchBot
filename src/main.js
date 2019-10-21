@@ -5,14 +5,13 @@ const Telegraf = require('telegraf');
 const ProxyAgent = require('proxy-agent');
 
 const MessageTypesRegister = require('./MessageTypesRegister');
-const newMessageType = require('./messageTypes/NewMessageType');
+const ratingMessageType = require('./messageTypes/RatingMessageType');
 
 const TOKEN = '987895286:AAFNeo0O_Ka6HpjpmPD_h71D_b65r3ZbY1Q';
 const PROXY_URI = 'http://37.59.158.104:3128';
 
 const messageTypesRegister = new MessageTypesRegister();
-messageTypesRegister.register(newMessageType);
-console.log(messageTypesRegister.prototype);
+messageTypesRegister.register(ratingMessageType);
 
 
 
