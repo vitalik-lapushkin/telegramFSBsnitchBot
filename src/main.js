@@ -7,8 +7,8 @@ const ProxyAgent = require('proxy-agent');
 const MessageTypesRegister = require('./MessageTypesRegister');
 const ratingMessageType = require('./messageTypes/RatingMessageType');
 
-const TOKEN = '987895286:AAFNeo0O_Ka6HpjpmPD_h71D_b65r3ZbY1Q';
-const PROXY_URI = 'http://37.59.158.104:3128';
+const TOKEN = process.env.TOKEN;
+const PROXY_URI = process.env.PROXY_URI;
 
 const messageTypesRegister = new MessageTypesRegister();
 messageTypesRegister.register(ratingMessageType);
